@@ -1,0 +1,18 @@
+//###########
+// funkcja do wyrenderowania komponentu w HTML'u 
+//
+bootstrapApplication(App).catch((err) => console.error(err));
+
+//###########
+// XXX
+//
+ng g c src/header								<- stworzy folder 'src' a w nim 'folder header z plikami komponentu'
+ng generate component header
+
+//###########
+// XXX
+//
+
+//###########
+// XXX
+//
