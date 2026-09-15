@@ -1,10 +1,23 @@
 <div>
   <p>header works!</p>
+
+  <hr />
+  <p>CLASSIC, zone.js STATE</p>
   <p>
     <img src="" [alt]="fullName" />
   </p>
   <p>fullName = {{ fullName }}</p>
   <p>
     <button (click)="onChangeUser()">LOSUJ</button>
+  </p>
+
+  <hr />
+  <p>NEW SIGNAL</p>
+  <p>
+    <img src="" [alt]="signalFullName()" />
+  </p>
+  <p>fullName = {{ signalFullName() }}</p>
+  <p>
+    <button (click)="onSignalChangeUser()">LOSUJ</button>
   </p>
 </div>
