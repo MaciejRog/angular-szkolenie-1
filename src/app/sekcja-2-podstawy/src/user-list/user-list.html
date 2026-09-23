@@ -1,0 +1,42 @@
+<hr />
+<hr />
+<p>nowe podejscie do 'for' i 'if'</p>
+<hr />
+<ul>
+  @for (userEl of userList; track userEl.id) {
+    <app-list-el
+      [isSelected]="selectedUser?.id === userEl.id ? true : false"
+      [userEL]="userEl"
+      (selectUser)="setSelectedUser($event)"
+    />
+  }
+</ul>
+
+@if (selectedUser) {
+  <div>
+    <p>SELECTED_USER</p>
+    <p>ID = {{ selectedUser.id }} [{{ selectedUser.firstName }} {{ selectedUser.lastName }}]</p>
+  </div>
+} @else {
+  <div>BRAK_WYBRANEGO</div>
+}
+
+<hr />
+<hr />
+<p>stare podejscie do 'for' i 'if' -> dyrektywy</p>
+<hr />
+<ul>
+  <div *ngFor="let directiveUserEl of userList">
+    <app-list-el
+      [isSelected]="selectedUser?.id === directiveUserEl.id ? true : false"
+      [userEL]="directiveUserEl"
+      (selectUser)="setSelectedUser($event)"
+    />
+  </div>
+</ul>
+
+<div *ngIf="selectedUser; else ifElse">
+  <p>SELECTED_USER - DYREKTYWA</p>
+  <p>ID = {{ selectedUser.id }} [{{ selectedUser.firstName }} {{ selectedUser.lastName }}]</p>
+</div>
+<ng-template #ifElse>BRAK_WYBRANEGO - DYREKTYWA</ng-template>
