@@ -1,0 +1,88 @@
+<form (ngSubmit)="onNgSubmit()" (submit)="onSubmit($event)">
+  <div class="row">
+    <label for="field-TextInput">field-TextInput</label>
+    <div class="column">
+      <input type="text" id="field-TextInput" name="field-TextInput" [(ngModel)]="fieldTextInput" />
+      <div class="preview">{{ fieldTextInput() }}</div>
+    </div>
+  </div>
+
+  <div class="row">
+    <label for="field-TextTextarea">field-TextTextarea</label>
+    <div class="column">
+      <textarea
+        id="field-TextTextarea"
+        name="field-TextTextarea"
+        [(ngModel)]="fieldTextTextarea"
+      ></textarea>
+
+      <div class="preview">{{ fieldTextTextarea() }}</div>
+    </div>
+  </div>
+
+  <div class="row">
+    <label for="field-Date">field-Date</label>
+    <div class="column">
+      <input type="date" id="field-Date" name="field-Date" [(ngModel)]="fieldDate" />
+      <div class="preview">{{ fieldDate() }}</div>
+    </div>
+  </div>
+
+  <div class="row">
+    <label for="field-Number">field-Number</label>
+    <div class="column">
+      <input type="number" id="field-Number" name="field-Number" [(ngModel)]="fieldNumber" />
+      <div class="preview">{{ fieldNumber() }}</div>
+    </div>
+  </div>
+
+  <!-- 
+	############
+	-->
+  <div class="row">
+    <label for="field-Check">field-Check</label>
+    <div class="column">
+      <input type="checkbox" id="field-Check" name="field-Check" [(ngModel)]="fieldCheck" />
+      <div class="preview">{{ fieldCheck() }}</div>
+    </div>
+  </div>
+
+  <div class="row">
+    <label for="field-Radio-1">field-Radio</label>
+    <div class="column">
+      <div>
+        <input
+          type="radio"
+          id="field-Radio-1"
+          name="field-Radio"
+          value="1"
+          [(ngModel)]="fieldRadio"
+        />
+        <input
+          type="radio"
+          id="field-Radio-2"
+          name="field-Radio"
+          value="2"
+          [(ngModel)]="fieldRadio"
+        />
+      </div>
+      <div class="preview">{{ fieldRadio() }}</div>
+    </div>
+  </div>
+
+  <!-- 
+	############
+	-->
+  <div class="row">
+    <label for="field-File">field-File</label>
+    <div class="column">
+      <input type="file" id="field-File" name="field-File" (change)="onChangeFieldFile($event)" />
+      <div class="preview">{{ fieldFileUrl() }}</div>
+    </div>
+  </div>
+
+  <!-- 
+	############
+	-->
+  <button type="submit">SUBMIT</button>
+</form>
