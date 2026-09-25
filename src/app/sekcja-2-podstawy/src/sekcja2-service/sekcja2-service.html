@@ -1,0 +1,25 @@
+<div class="wrapper">
+  <form>
+    <input type="text" id="field-taskId" name="field-taskId" [(ngModel)]="newTaskId" />
+    <button type="submit" (click)="handleSubmitNewTaskA()">DODAJ A</button>
+    <button type="submit" (click)="handleSubmitNewTaskB()">DODAJ B</button>
+  </form>
+
+  <div>
+    <p>SERVICE_A</p>
+    <ol>
+      @for (task of taskServiceA.getTasks(); track task.id) {
+        <li>TASK ID = {{ task.id }}</li>
+      }
+    </ol>
+  </div>
+
+  <div>
+    <p>SERVICE_B</p>
+    <ol>
+      @for (task of taskServiceB.getTasks(); track task.id) {
+        <li>TASK ID = {{ task.id }}</li>
+      }
+    </ol>
+  </div>
+</div>
