@@ -3,10 +3,11 @@ import { Header } from './src/header/header';
 import { UserList } from './src/user-list/user-list';
 import { Sekcja2Form } from './src/sekcja2-form/sekcja2-form';
 import { Sekcja2Ngcontent } from './src/sekcja2-ngcontent/sekcja2-ngcontent';
+import { Sekcja2Pipes } from './src/sekcja2-pipes/sekcja2-pipes';
 
 @Component({
   selector: 'app-sekcja-2',
-  imports: [Header, UserList, Sekcja2Form, Sekcja2Ngcontent],
+  imports: [Header, UserList, Sekcja2Form, Sekcja2Ngcontent, Sekcja2Pipes],
   template: `
     <div class="sekcja-2">
       <app-header />
@@ -15,12 +16,15 @@ import { Sekcja2Ngcontent } from './src/sekcja2-ngcontent/sekcja2-ngcontent';
       <hr />
       <app-sekcja2-form />
       <hr />
-      <app-sekcja2-ngcontent>
+      <app-sekcja2-ngcontent
+        >-
         <p>Treść_1</p>
       </app-sekcja2-ngcontent>
       <app-sekcja2-ngcontent>
         <p>Treść_2</p>
       </app-sekcja2-ngcontent>
+      <hr />
+      <app-sekcja2-pipes />
     </div>
   `,
   styles: `
